@@ -12,7 +12,7 @@ data class OsPronto(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val idOS: Long = 0,
 
-    @OneToOne
+    @ManyToOne
     val idCliente: Cliente,
     //@ManyToOne
     //val cliente: Cliente,
