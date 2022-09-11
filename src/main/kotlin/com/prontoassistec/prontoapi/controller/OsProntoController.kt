@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*
 import javax.validation.Valid
 
 @RestController
-@RequestMapping("/pronto-api")
+@RequestMapping("/")
 class OsProntoController (private val osProntoRepository: OsProntoRepository){
 
         @GetMapping("/os")

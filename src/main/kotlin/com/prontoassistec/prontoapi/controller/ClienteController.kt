@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*
 import javax.validation.Valid
 
 @RestController
-@RequestMapping("/pronto-api")
+@RequestMapping("/")
 class ClienteController (private val clienteRepository: ClienteRepository){
 
     @GetMapping("/clientes")
