@@ -8,5 +8,4 @@ class ProntoApiApplication
 
 fun main(args: Array<String>) {
 	runApplication<ProntoApiApplication>(*args)
-	println("Hello !!")
 }
