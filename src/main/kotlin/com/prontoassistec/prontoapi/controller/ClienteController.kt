@@ -2,7 +2,6 @@ package com.prontoassistec.prontoapi.controller
 
 import com.prontoassistec.prontoapi.model.Cliente
 import com.prontoassistec.prontoapi.repository.ClienteRepository
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -12,8 +11,6 @@ import javax.validation.Valid
 @RestController
 @RequestMapping("/pronto-api")
 class ClienteController (private val clienteRepository: ClienteRepository){
-    @Value("\${spring.datasource.url}")
-    private var dbUrl: String? = null
 
     @GetMapping("/clientes")
     fun getAllClientes(): List<Cliente> =
