@@ -4,14 +4,13 @@ import com.prontoassistec.prontoapi.model.Cliente
 import com.prontoassistec.prontoapi.repository.ClienteRepository
 import io.swagger.annotations.Api
 import io.swagger.annotations.ApiOperation
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import javax.validation.Valid
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/api")
 @CrossOrigin("*")
 @Api(value = "API REST Cliente")
 class ClienteController (private val clienteRepository: ClienteRepository){

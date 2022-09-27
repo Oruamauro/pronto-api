@@ -12,7 +12,7 @@ import javax.validation.Valid
 class ServicoController(private val servicoRepository: Repository) {
 
     @RestController
-    @RequestMapping("/")
+    @RequestMapping("/api")
     class ServicoController (private val servicoRepository: ServicoRepository){
 
         @GetMapping("/servicos")

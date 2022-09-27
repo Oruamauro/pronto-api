@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*
 import javax.validation.Valid
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/api")
 class ProdutoController(private val produtoRepository: ProdutoRepository) {
 
     @GetMapping("/produtos")

@@ -19,7 +19,8 @@ class SwaggerConfig {
     fun prontoapi(): Docket? {
         return Docket(DocumentationType.SWAGGER_2)
             .select()
-            .apis(RequestHandlerSelectors.any())
+            .apis(RequestHandlerSelectors
+                .basePackage("com.prontoassistec.prontoapi.controller"))
             .paths(PathSelectors.any())
             .build()
             .apiInfo(metaInfo())
