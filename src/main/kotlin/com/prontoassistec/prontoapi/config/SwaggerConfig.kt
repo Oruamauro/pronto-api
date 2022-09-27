@@ -3,7 +3,6 @@ package com.prontoassistec.prontoapi.config
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import springfox.documentation.builders.PathSelectors
-import springfox.documentation.builders.PathSelectors.regex
 import springfox.documentation.builders.RequestHandlerSelectors
 import springfox.documentation.service.ApiInfo
 import springfox.documentation.service.Contact
@@ -17,7 +16,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2
 class SwaggerConfig {
 
     @Bean
-    fun productApi(): Docket? {
+    fun prontoapi(): Docket? {
         return Docket(DocumentationType.SWAGGER_2)
             .select()
             .apis(RequestHandlerSelectors.any())
@@ -33,7 +32,7 @@ class SwaggerConfig {
             "1.0",
             "Terms of Service",
             Contact(
-                "José Mauro de Souza", "https://pronto-api.herokuapp.com",
+                "José Mauro de Souza", "https://www.youtube.com/channel/UCwrX-bK-ZHyIoH1g-0hts9Q",
                 "jmauroprofessor@gmail.com"
             ),
             "Apache License Version 2.0",

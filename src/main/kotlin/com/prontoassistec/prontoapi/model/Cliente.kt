@@ -1,6 +1,7 @@
 package com.prontoassistec.prontoapi.model
 
 
+import io.swagger.annotations.ApiOperation
 import org.hibernate.Hibernate
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
@@ -11,6 +12,7 @@ import javax.validation.constraints.NotEmpty
 import javax.validation.constraints.NotNull
 
 @Entity
+    @ApiOperation(value = "Modelo de cliente.")
     data class Cliente(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

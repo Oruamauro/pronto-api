@@ -1,15 +1,13 @@
 package com.prontoassistec.prontoapi.model
-import java.util.Objects
-import java.util.Optional
+import io.swagger.annotations.ApiOperation
 import javax.persistence.*
-import javax.persistence.EnumType.ORDINAL
-import javax.persistence.EnumType.STRING
 
 @Entity
 data class OsPronto(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @get:ApiOperation(value = "Modelo de ordem de serviços.")
     val idOS: Long = 0,
 
     @ManyToOne

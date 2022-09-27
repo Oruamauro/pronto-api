@@ -2,6 +2,7 @@ package com.prontoassistec.prontoapi.controller
 
 import com.prontoassistec.prontoapi.model.Produto
 import com.prontoassistec.prontoapi.repository.ProdutoRepository
+import io.swagger.annotations.ApiOperation
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
@@ -12,14 +13,17 @@ import javax.validation.Valid
 class ProdutoController(private val produtoRepository: ProdutoRepository) {
 
     @GetMapping("/produtos")
+    @ApiOperation(value = "Retorna todos os produtos.")
     fun getAllProdutoss(): List<Produto> =
         produtoRepository.findAll()
 
     @PostMapping("/produtos")
+    @ApiOperation(value = "Cadastra um produto.")
     fun createNewProduto(@Valid @RequestBody produto: Produto): Produto =
         produtoRepository.save(produto)
 
     @GetMapping("/produtos/{idProduto}")
+    @ApiOperation(value = "Retorna um produto por id.")
     fun getProdutoById(@PathVariable(value = "idProduto") idProduto: Long): ResponseEntity<Produto> {
         return produtoRepository.findById(idProduto).map { produto ->
             ResponseEntity.ok(produto)
@@ -27,6 +31,7 @@ class ProdutoController(private val produtoRepository: ProdutoRepository) {
     }
 
     @PutMapping("/produtos/{idProduto}")
+    @ApiOperation(value = "Atualiza um produto por idProduto.")
     fun updateProdutoById(@PathVariable(value = "idProduto") idProduto: Long,
                           @Valid @RequestBody newProduto: Produto
     ): ResponseEntity<Produto> {
@@ -40,6 +45,7 @@ class ProdutoController(private val produtoRepository: ProdutoRepository) {
         }.orElse(ResponseEntity.notFound().build())
     }
     @DeleteMapping("/produtos/{idProduto}")
+    @ApiOperation(value = "Exclui um produto por idProduto.")
     fun deleteProdutoById(@PathVariable(value = "idProduto") idProduto: Long): ResponseEntity<Void> {
 
         return produtoRepository.findById(idProduto).map { produto ->
