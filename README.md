@@ -5,7 +5,7 @@ Documentação: https://pronto-api.herokuapp.com/swagger-ui/index.html#/
               
 Acesso json: https://pronto-api.herokuapp.com/v2/api-docs
 
-Acesso url: pronto-api.herokuapp.com/
+Acessourl: pronto-api.herokuapp.com/
 
 Terms of service
 José Mauro de Souza - Website
