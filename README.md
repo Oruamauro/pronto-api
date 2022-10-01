@@ -3,9 +3,9 @@ REST API - Controle de serviços PRONTO ASSISTEC
 
 Documentação: https://pronto-api.herokuapp.com/swagger-ui/index.html#/
               
-              https://pronto-api.herokuapp.com/v2/api-docs
+Acesso json: https://pronto-api.herokuapp.com/v2/api-docs
 
-url: pronto-api.herokuapp.com/
+Acesso url: pronto-api.herokuapp.com/
 
 Terms of service
 José Mauro de Souza - Website
